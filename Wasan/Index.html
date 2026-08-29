@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Sandra Dwi Aulia ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            background:
+                radial-gradient(circle at top, #ffb6d9 0%, transparent 35%),
+                linear-gradient(135deg, #ff758c, #ff7eb3, #b06cff);
+            color: white;
+        }
+
+        /* BACKGROUND GLOW */
+
+        .glow {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: .35;
+            pointer-events: none;
+        }
+
+        .glow.one {
+            background: #fff;
+            top: -100px;
+            left: -100px;
+        }
+
+        .glow.two {
+            background: #ffddf0;
+            right: -100px;
+            bottom: -100px;
+        }
+
+        /* MAIN */
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .card {
+            width: min(92%, 520px);
+            padding: 35px 25px 45px;
+            text-align: center;
+
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.35);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border-radius: 35px;
+            box-shadow:
+                0 25px 70px rgba(70,0,40,.25),
+                inset 0 0 30px rgba(255,255,255,.1);
+
+            animation: cardIn 1.2s ease;
+        }
+
+        @keyframes cardIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* HEART */
+
+        .heart {
+            font-size: 65px;
+            animation: heartbeat 1.4s infinite;
+            filter: drop-shadow(0 0 15px rgba(255,255,255,.7));
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.18);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.15);
+            }
+        }
+
+        .small-text {
+            margin-top: 5px;
+            font-size: 13px;
+            opacity: .85;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            margin-top: 8px;
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(45px, 12vw, 75px);
+            font-weight: 400;
+            text-shadow: 0 4px 15px rgba(80,0,40,.25);
+        }
+
+        .subtitle {
+            margin-top: 5px;
+            font-size: 15px;
+            opacity: .9;
+        }
+
+        /* FOTO */
+
+        .photo {
+            width: 115px;
+            height: 115px;
+            margin: 20px auto 10px;
+
+            border-radius: 50%;
+            object-fit: cover;
+
+            border: 4px solid rgba(255,255,255,.8);
+
+            box-shadow:
+                0 0 0 8px rgba(255,255,255,.1),
+                0 10px 30px rgba(70,0,40,.3);
+
+            animation: photoFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes photoFloat {
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .message {
+            margin: 20px auto;
+            max-width: 420px;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .message strong {
+            color: #fff;
+        }
+
+        /* BUTTON */
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .yes {
+            padding: 15px 30px;
+            border-radius: 50px;
+            background: white;
+            color: #ff4f87;
+            box-shadow: 0 10px 25px rgba(70,0,40,.25);
+        }
+
+        .yes:hover {
+            transform: scale(1.08);
+        }
+
+        .no {
+            padding: 15px 25px;
+            border-radius: 50px;
+            background: rgba(255,255,255,.15);
+            color: white;
+            border: 1px solid rgba(255,255,255,.4);
+        }
+
+        /* MUSIC */
+
+        .music {
+            margin-top: 25px;
+        }
+
+        .music button {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: #ff5b91;
+            background: white;
+            font-size: 18px;
+        }
+
+        .music p {
+            font-size: 11px;
+            margin-top: 7px;
+            opacity: .75;
+        }
+
+        /* FALLING FLOWERS */
+
+        .flower {
+            position: fixed;
+            top: -50px;
+            pointer-events: none;
+            z-index: 2;
+
+            animation:
+                fall linear forwards,
+                sway ease-in-out infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        @keyframes sway {
+            0%,100% {
+                margin-left: -20px;
+            }
+
+            50% {
+                margin-left: 20px;
+            }
+        }
+
+        /* HEART PARTICLES */
+
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 10;
+            animation: particleUp 2s ease-out forwards;
+        }
+
+        @keyframes particleUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-150px) scale(1.5);
+            }
+        }
+
+        /* BONEKA */
+
+        .doll {
+            position: fixed;
+            bottom: -15px;
+            left: 25px;
+            width: 110px;
+            z-index: 20;
+
+            cursor: pointer;
+
+            animation: dollPeek 3s ease-in-out infinite;
+
+            filter: drop-shadow(0 8px 12px rgba(0,0,0,.25));
+        }
+
+        @keyframes dollPeek {
+            0%,100% {
+                transform: translateY(0) rotate(-3deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(3deg);
+            }
+        }
+
+        .doll:hover {
+            transform: scale(1.1);
+        }
+
+        .doll-text {
+            position: fixed;
+            bottom: 105px;
+            left: 20px;
+
+            background: white;
+            color: #ff4f87;
+
+            padding: 10px 14px;
+            border-radius: 20px;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            opacity: 0;
+            transform: translateY(10px);
+            transition: .4s;
+
+            z-index: 21;
+        }
+
+        .doll-text.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* SUCCESS */
+
+        .success {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: rgba(255,80,140,.92);
+            backdrop-filter: blur(15px);
+
+            z-index: 100;
+
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+        }
+
+        .success.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .success-box {
+            text-align: center;
+            padding: 30px;
+            animation: successIn 1s ease;
+        }
+
+        @keyframes successIn {
+            from {
+                transform: scale(.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .success-heart {
+            font-size: 90px;
+            animation: heartbeat 1s infinite;
+        }
+
+        .success h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 65px;
+            font-weight: 400;
+        }
+
+        .success p {
+            margin-top: 10px;
+            line-height: 1.8;
+        }
+
+        .close {
+            margin-top: 25px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: white;
+            color: #ff4f87;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 500px) {
+
+            .card {
+                padding: 28px 18px 35px;
+                border-radius: 28px;
+            }
+
+            .heart {
+                font-size: 50px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .photo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .message {
+                font-size: 13px;
+            }
+
+            .doll {
+                width: 75px;
+                left: 10px;
+            }
+
+            .doll-text {
+                bottom: 75px;
+                left: 8px;
+            }
+
+            .buttons {
+                gap: 10px;
+            }
+
+            .yes,
+            .no {
+                padding: 13px 20px;
+                font-size: 13px;
+            }
+
+            .success h2 {
+                font-size: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <!-- MUSIK -->
+    <audio id="music" loop>
+        <source src="www.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="heart">❤️</div>
+
+            <div class="small-text">
+                Khusus soko wong keren
+            </div>
+
+            <h1>Sandra</h1>
+
+            <!--
+            Kalau mau pakai foto:
+            hapus display:none;
+            lalu masukkan foto.jpg
+            -->
+
+            <img
+                src="foto.jpg"
+                class="photo"
+                onerror="this.style.display='none'"
+                alt="Sandra"
+            >
+
+            <div class="subtitle">
+                Sandra Dwi Aulia ✨
+            </div>
+
+            <div class="message">
+                Mungkin iki pertama dan terakhir...
+                <br><br>
+
+                Gausah alay alay lah yoooo... podo gedene tapi iki pikiren sek tak nteni sak tekanem.
+
+                <br><br>
+
+                iki aku memberanikan diri
+                untuk bertanya satu hal...
+                
+                <br><br>
+
+                <strong>
+                    Sandra Dwi Aulia, gelem ga kamu
+                    dadi wong sing spesial ng uripku *Pacar* ? ❤️
+                </strong>
+            </div>
+
+            <div class="buttons">
+
+                <button class="yes" onclick="sayYes()">
+                    ❤️ IYoooooo
+                </button>
+
+                <button class="no" id="noButton" onclick="sayNo()">
+                    😳 moh.
+                </button>
+
+            </div>
+
+            <div class="music">
+
+                <button onclick="toggleMusic()" id="musicButton">
+                    ▶️
+                </button>
+
+                <p>
+                    Putar lagu 🎵
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BONEKA -->
+
+    <div class="doll-text" id="dollText">
+        Psst... Sandra, jawab IYA dong! 🤭❤️
+    </div>
+
+    <div class="doll" onclick="dollClick()">
+
+        <!-- Boneka sederhana menggunakan emoji -->
+        <svg viewBox="0 0 150 150">
+
+            <!-- badan -->
+            <ellipse
+                cx="75"
+                cy="125"
+                rx="45"
+                ry="25"
+                fill="#f4b6d2"
+            />
+
+            <!-- kepala -->
+            <circle
+                cx="75"
+                cy="75"
+                r="42"
+                fill="#f8c9a9"
+            />
+
+            <!-- rambut -->
+            <path
+                d="M35 70
+                   Q35 25 75 25
+                   Q115 25 115 70
+                   Q105 45 75 48
+                   Q45 45 35 70"
+                fill="#51352f"
+            />
+
+            <!-- telinga -->
+            <circle cx="32" cy="75" r="9" fill="#f8c9a9"/>
+            <circle cx="118" cy="75" r="9" fill="#f8c9a9"/>
+
+            <!-- mata -->
+            <circle cx="60" cy="75" r="4" fill="#333"/>
+            <circle cx="90" cy="75" r="4" fill="#333"/>
+
+            <!-- hidung -->
+            <circle cx="75" cy="84" r="3" fill="#e99b8c"/>
+
+            <!-- mulut -->
+            <path
+                d="M68 91 Q75 97 82 91"
+                stroke="#d65a75"
+                stroke-width="3"
+                fill="none"
+            />
+
+            <!-- tangan -->
+            <circle cx="35" cy="120" r="12" fill="#f8c9a9"/>
+            <circle cx="115" cy="120" r="12" fill="#f8c9a9"/>
+
+        </svg>
+
+    </div>
+
+
+    <!-- SUCCESS -->
+
+    <div class="success" id="success">
+
+        <div class="success-box">
+
+            <div class="success-heart">
+                💖
+            </div>
+
+            <h2>Yeay! ❤️</h2>
+
+            <p>
+                Sandra Dwi Aulia...<br>
+                iki deallll sumpahhhhh????? . 🥹❤️
+                <br><br>
+                Terima kasihhhhhh.
+                <br>
+                sepurane gung iso ngekek i luweh mergo we roh dewe lage bar KKN aku yo mergae bar wi jek dadi panitia dadi mbuh iso petuk kapan neh memnding tak tokno kabeh opo sing ng njero.
+            </p>
+
+            <button class="close" onclick="closeSuccess()">
+                🥰 Tutup
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const music = document.getElementById("music");
+        const musicButton = document.getElementById("musicButton");
+
+        /* =========================
+           MUSIC
+        ========================= */
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.play();
+
+                musicButton.innerHTML = "⏸️";
+
+            } else {
+
+                music.pause();
+
+                musicButton.innerHTML = "▶️";
+
+            }
+
+        }
+
+
+        /* =========================
+           BUNGA JATUH
+        ========================= */
+
+        const flowers = [
+            "🌸",
+            "🌹",
+            "🌷",
+            "💮",
+            "🌺",
+            "❤️",
+            "💗"
+        ];
+
+        function createFlower() {
+
+            const flower = document.createElement("div");
+
+            flower.className = "flower";
+
+            flower.innerHTML =
+                flowers[Math.floor(Math.random() * flowers.length)];
+
+            flower.style.left =
+                Math.random() * 100 + "vw";
+
+            flower.style.fontSize =
+                (12 + Math.random() * 22) + "px";
+
+            const duration =
+                5 + Math.random() * 7;
+
+            flower.style.animationDuration =
+                duration + "s, " +
+                (2 + Math.random() * 3) + "s";
+
+            document.body.appendChild(flower);
+
+            setTimeout(() => {
+                flower.remove();
+            }, duration * 1000);
+
+        }
+
+        setInterval(createFlower, 350);
+
+
+        /* =========================
+           PARTICLE HATI
+        ========================= */
+
+        function createHeart(x, y) {
+
+            const heart = document.createElement("div");
+
+            heart.className = "particle";
+
+            heart.innerHTML =
+                ["❤️","💖","💕","💗","💓"]
+                [Math.floor(Math.random() * 5)];
+
+            heart.style.left = x + "px";
+            heart.style.top = y + "px";
+
+            heart.style.fontSize =
+                (15 + Math.random() * 25) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 2000);
+        }
+
+
+        /* =========================
+           YES
+        ========================= */
+
+        function sayYes() {
+
+            document.getElementById("success")
+                .classList.add("show");
+
+            // musik otomatis
+            music.play().catch(() => {});
+
+            musicButton.innerHTML = "⏸️";
+
+            // hujan hati
+            for (let i = 0; i < 80; i++) {
+
+                setTimeout(() => {
+
+                    createHeart(
+                        Math.random() * window.innerWidth,
+                        window.innerHeight
+                    );
+
+                }, i * 40);
+
+            }
+
+        }
+
+
+        /* =========================
+           NO BUTTON
+        ========================= */
+
+        let noCount = 0;
+
+        function sayNo() {
+
+            noCount++;
+
+            const button =
+                document.getElementById("noButton");
+
+            const messages = [
+                "Sumpah? 🥺",
+                "pikir neh.. 😭",
+                "Moso enggak? 🥹",
+                "Ak sedeh ki 😭",
+                "Sandraaa 😭❤️",
+                "Tolong pilih IYho 🥺",
+                "tega we 😭",
+                "IYho ae ya? ❤️"
+            ];
+
+            button.innerText =
+                messages[Math.min(
+                    noCount - 1,
+                    messages.length - 1
+                )];
+
+            // tombol kabur
+            if (noCount >= 2) {
+
+                const maxX =
+                    window.innerWidth - button.offsetWidth - 20;
+
+                const maxY =
+                    window.innerHeight - button.offsetHeight - 20;
+
+                button.style.position = "fixed";
+
+                button.style.left =
+                    Math.max(10, Math.random() * maxX) + "px";
+
+                button.style.top =
+                    Math.max(10, Math.random() * maxY) + "px";
+
+            }
+
+        }
+
+
+        /* =========================
+           BONEKA
+        ========================= */
+
+        function dollClick() {
+
+            const text =
+                document.getElementById("dollText");
+
+            text.classList.toggle("show");
+
+            // bikin beberapa hati
+            for (let i = 0; i < 8; i++) {
+
+                setTimeout(() => {
+
+                    createHeart(
+                        50 + Math.random() * 100,
+                        window.innerHeight - 120
+                    );
+
+                }, i * 100);
+
+            }
+
+        }
+
+
+        /* =========================
+           KLIK LAYAR
+        ========================= */
+
+        document.addEventListener("click", function(e) {
+
+            if (
+                e.target.tagName !== "BUTTON" &&
+                !e.target.closest(".doll")
+            ) {
+
+                createHeart(
+                    e.clientX,
+                    e.clientY
+                );
+
+            }
+
+        });
+
+
+        /* =========================
+           CLOSE
+        ========================= */
+
+        function closeSuccess() {
+
+            document.getElementById("success")
+                .classList.remove("show");
+
+        }
+
+    </script>
+
+</body>
+</html>
